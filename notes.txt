@@ -10,3 +10,6 @@ timelines makes sequence of animations.
 .right-leaf ko y:200 → matlab 200px niche move karna.
 .left-leaf ko y:-200 → matlab 200px upar move karna.
 ,0 → ye timeline ka position parameter hai. 0 ka matlab hai dono animations same time pe start karenge (parallel).
+-----------------------
+VideoReference video ka timeline banyaa ha basically now video laga rahii hun or uski animations ki basic understanding le rahiii hun to sab se phly to useRef banaya hua ha ...Video ke properties (jaise currentTime, duration) access karne hain → React me directly DOM access nahi karte → so useRef banaya."
+videoRef.current = gsap.timeline({ ... }).....isse vidoeRef.current ek timeline objectban gaya ha ab videoRef.current ek simple variable nahi raha, balki wo ek reference ban gaya jo GSAP ka timeline instance point kar raha hai. isliye ab tum kahin bhi videoRef.current.pause() ya videoRef.current.kill() likho to wo directly usi timeline ko control karega jo tumne banayi thi.
